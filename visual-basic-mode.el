@@ -1509,7 +1509,7 @@ Interting an item means:
 		(visual-basic-previous-line-of-code)
 		(setq previous-line-of-code t))
 	      (null item-case)))))
-    (case item-case
+    (cl-case item-case
       ((:dim-split-after)   (message "split after") (goto-char cur-point))
       ((:dim-split-before)  (message "split before") (goto-char split-point))
       ((:select-with-else)  (goto-char split-point))
@@ -1635,7 +1635,7 @@ corrections under the control of user.
 
 This function is under construction"
   (interactive)
-  (flet
+  (cl-flet
       ((insert-space-at-point
 	()
 	(insert " "))
